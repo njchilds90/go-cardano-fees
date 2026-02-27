@@ -10,15 +10,15 @@ func TestMinUTxOFromBytes(t *testing.T) {
 	p := fees.DefaultMainnetParams()
 
 	tests := []struct {
-		name      string
-		bytes     uint64
-		want      uint64
-		wantErr   bool
+		name    string
+		bytes   uint64
+		want    uint64
+		wantErr bool
 	}{
 		{
 			name:  "base shelley output ~100 bytes",
 			bytes: 100,
-			want:  (160 + 100) * 4310, // 1_122_600
+			want:  (160 + 100) * 4310, // 1_120_600
 		},
 		{
 			name:  "larger output 200 bytes",
@@ -146,7 +146,7 @@ func TestMinUTxOBundleGrowth(t *testing.T) {
 		t.Errorf("expected min1 < min5, got %d >= %d", min1, min5)
 	}
 	if min5 >= min10 {
-		t.Errorf("expected min5 < min10, got %d >= %d", min5, min10)
+		tt.Errorf("expected min5 < min10, got %d >= %d", min5, min10)
 	}
 }
 
