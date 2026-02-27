@@ -23,10 +23,13 @@ func ToLovelace(ada float64) (uint64, error) {
 	if ada < 0 {
 		return 0, fmt.Errorf("fees: ToLovelace: ada must be non-negative, got %f", ada)
 	}
-	result := ada * float64(LovelacePerADA)
-	if result > float64(math.MaxUint64) {
+	// Compute the maximum ADA value that can be represented without overflow.
+	// maxAda = MaxUint64 / LovelacePerADA
+	maxAda := float64(math.MaxUint64) / float64(LovelacePerADA)
+	if ada > maxAda {
 		return 0, fmt.Errorf("fees: ToLovelace: value %f overflows uint64", ada)
 	}
+	result := ada * float64(LovelacePerADA)
 	return uint64(result), nil
 }
 
