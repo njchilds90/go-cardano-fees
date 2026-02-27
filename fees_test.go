@@ -107,7 +107,7 @@ func TestEstimateFee(t *testing.T) {
 			}
 			// Sanity: fee should be at least MinFeeB
 			if fee < p.MinFeeB {
-				t.Errorf("fee %d is below MinFeeB %d", fee, p.MinFeeB)
+				 t.Errorf("fee %d is below MinFeeB %d", fee, p.MinFeeB)
 			}
 		})
 	}
