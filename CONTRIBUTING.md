@@ -61,12 +61,11 @@ If you find a discrepancy between this library's output and `cardano-cli transac
 ## License
 
 By contributing, you agree your contributions are licensed under the MIT License.
-```
 
 ---
 
 ## Release & Verification Instructions
-```
+
 RELEASE STEPS — go-cardano-fees v1.0.0
 ========================================
 
@@ -106,6 +105,7 @@ RELEASE STEPS — go-cardano-fees v1.0.0
      for a complete NFT minting toolkit.
 
      ### Install
+
 ```
      go get github.com/njchilds90/go-cardano-fees@v1.0.0
 ```
