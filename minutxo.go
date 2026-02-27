@@ -63,10 +63,10 @@ type OutputSize struct {
 // Example (single NFT output):
 //
 //	minADA, err := fees.MinUTxO(p, fees.OutputSize{
-//	    AddressBytes:        57,
-//	    NumPolicies:         1,
-//	    NumAssets:           1,
-//	    TotalAssetNameBytes: 32,
+//		AddressBytes:        57,
+//		NumPolicies:         1,
+//		NumAssets:           1,
+//		TotalAssetNameBytes: 32,
 //	})
 //	// minADA ≈ 1,310,000 Lovelace (≈ 1.31 ADA)
 func MinUTxO(p ProtocolParams, out OutputSize) (uint64, error) {
@@ -120,10 +120,10 @@ func MinUTxOFromBytes(p ProtocolParams, serializedOutputBytes uint64) (uint64, e
 // Example:
 //
 //	size := fees.EstimateOutputBytes(fees.OutputSize{
-//	    AddressBytes:        57,
-//	    NumPolicies:         1,
-//	    NumAssets:           1,
-//	    TotalAssetNameBytes: 9,
+//		AddressBytes:        57,
+//		NumPolicies:         1,
+//		NumAssets:           1,
+//		TotalAssetNameBytes: 9,
 //	})
 func EstimateOutputBytes(out OutputSize) uint64 {
 	const (
