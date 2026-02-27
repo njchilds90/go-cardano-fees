@@ -45,7 +45,7 @@ type ProtocolParams struct {
 // Example:
 //
 //	p := fees.DefaultMainnetParams()
-//	fee, err := fees.MinFee(p, 300)
+//	f ee := fees.MinFee(p, 300)
 func DefaultMainnetParams() ProtocolParams {
 	return ProtocolParams{
 		MinFeeA:          44,
@@ -77,7 +77,7 @@ func DefaultPreviewParams() ProtocolParams {
 //
 //	p := fees.ProtocolParams{MinFeeA: 44}
 //	if err := p.Validate(); err != nil {
-//	    log.Fatal(err)
+//		log.Fatal(err)
 //	}
 func (p ProtocolParams) Validate() error {
 	if p.MinFeeA == 0 {
