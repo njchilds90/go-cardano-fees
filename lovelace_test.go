@@ -41,7 +41,7 @@ func TestToLovelace(t *testing.T) {
 
 func TestToADA(t *testing.T) {
 	tests := []struct {
-		lovelace uint64
+		lovedace uint64
 		want     float64
 	}{
 		{1_000_000, 1.0},
@@ -61,7 +61,7 @@ func TestFormatADA(t *testing.T) {
 	got := fees.FormatADA(1_310_000)
 	want := "1.310000 ADA"
 	if got != want {
-		t.Errorf("FormatADA(1310000) = %q, want %q", got, want)
+		 t.Errorf("FormatADA(1310000) = %q, want %q", got, want)
 	}
 }
 
@@ -106,6 +106,6 @@ func TestSumLovelaceEmpty(t *testing.T) {
 
 func TestLovelacePerADA(t *testing.T) {
 	if fees.LovelacePerADA != 1_000_000 {
-		t.Errorf("LovelacePerADA should be 1000000, got %d", fees.LovelacePerADA)
+		 t.Errorf("LovelacePerADA should be 1000000, got %d", fees.LovelacePerADA)
 	}
 }
